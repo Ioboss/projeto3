@@ -25,7 +25,13 @@ section {
   padding: 4rem 0;
 }
 
-h1, h2 {
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2 {
   font-family: "Poppins", sans-serif;
   line-height: 1.2;
   font-weight: 700;
@@ -165,20 +171,19 @@ p {
   text-transform: uppercase;
   height: 200px;
   background: url(../img/paraquedas-home.jpg) no-repeat center center;
-  border-radius: 5px 5px 0 0 ;
+  border-radius: 5px 5px 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .passeios-home-lista li:nth-child(2) h2 {
-    background: url(../img/asa-delta-home.jpg) no-repeat center center;
+  background: url(../img/asa-delta-home.jpg) no-repeat center center;
 }
 
 .passeios-home-lista li:nth-child(3) h2 {
-    background: url(../img/balonismo-home.jpg) no-repeat center center;
+  background: url(../img/balonismo-home.jpg) no-repeat center center;
 }
-
 
 .passeios-home-lista p {
   padding: 2rem;
@@ -194,4 +199,101 @@ p {
 
 .passeios-home-lista a:hover {
   text-decoration: underline;
+}
+
+/* DEPOIMENTOS HOME */
+
+.depoimentos-home {
+  width: 100%;
+  background: var(--white-2);
+  text-align: center;
+}
+
+.depoimentos-lista {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  text-align: left;
+  padding: 2rem 0;
+}
+
+.depoimentos-lista li {
+  display: grid;
+  grid-template-columns: auto minmax(200px, 1fr);
+  gap: 1rem;
+  align-items: center;
+}
+
+.depoimentos-lista img {
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.08);
+}
+
+.depoimentos-lista h2 {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.depoimentos-lista q {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* GALERIA HOME */
+
+.galeria-home{
+  text-align: center;
+}
+
+.galeria-lista{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.galeria-lista img{
+  border-radius: 5px;
+}
+
+/* SOBRE HOME */
+
+.sobre-home{
+  width: 100%;
+  background: var(--white-2);
+  text-align: center;
+}
+
+.sobre-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.sobre-container img{
+  background: #fff;
+  padding:2rem ;
+  border: 1px solid var(--white-3);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.sobre-quote{
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-style: italic;
+  max-width: 750px;
+  margin:4rem auto 0 auto ;
+  color: var(--black-3);
+}
+
+.sobre-cite{
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  display: block;
+  text-align: right;
+  margin-top: 1rem;
+  color: var(--black-1);
 }
