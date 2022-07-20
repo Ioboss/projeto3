@@ -18,7 +18,7 @@ html {
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   background: var(--white-1);
-  color: var(--black-1);
+  color: black;
 }
 
 section {
@@ -116,8 +116,7 @@ p {
   transition: 0.1s ease-out;
 }
 
-.header li a:hover,
-.header li a.ativo {
+.header li a:hover {
   border-bottom: 2px solid #fff;
 }
 
@@ -127,6 +126,7 @@ p {
   display: flex;
   margin-top: 68px;
   width: 100%;
+
   height: 500px;
   background: url(../img/bg-home.jpg) no-repeat center center;
   background-size: cover;
@@ -269,6 +269,7 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: center;
+  text-align: center;
 }
 
 .sobre-container img {
@@ -279,6 +280,10 @@ p {
   box-sizing: border-box;
 }
 
+.sobre-container p{
+ text-align: left;
+}
+
 .sobre-quote {
   font-size: 1.5rem;
   line-height: 1.5;
@@ -286,6 +291,7 @@ p {
   max-width: 750px;
   margin: 4rem auto 0 auto;
   color: var(--black-3);
+ text-align: center;
 }
 
 .sobre-cite {
@@ -313,49 +319,49 @@ p {
   margin-bottom: 1rem;
 }
 
-.footer li a{
+.footer li a {
   display: inline-block;
   font-size: 00.875rem;
   color: var(--white-1);
-  transition: 0.1s ease-out ;
+  transition: 0.1s ease-out;
 }
 
-.footer li a:hover{
+.footer li a:hover {
   text-decoration: underline;
 }
 
-.footer-container{
+.footer-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
 
-.footer-container > li+li{
+.footer-container > li + li {
   padding-left: 2rem;
   border-left: 1px solid var(--black-1);
 }
 
-.mapa-do-site li+li{
+.mapa-do-site li + li {
   margin-top: 0.25rem;
 }
 
-.footer-contato li+li{
+.footer-contato li + li {
   margin-top: 0.5rem;
 }
 
-.redes-sociais{
+.redes-sociais {
   display: grid;
   grid-template-columns: repeat(4, 2rem);
   gap: 0.5rem;
 }
 
-.redes-sociais li{
+.redes-sociais li {
   background: var(--blue-3);
   border-radius: 5px;
   transition: 0.2s ease;
 }
 
-.redes-sociais li a{
+.redes-sociais li a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -363,11 +369,11 @@ p {
   height: 2rem;
 }
 
-.redes-sociais li:hover{
+.redes-sociais li:hover {
   background: var(--blue-1);
 }
 
-.copyright{
+.copyright {
   width: 100%;
   background: linear-gradient(135deg, var(--blue-1), var(--blue-3));
   padding: 2rem 1rem;
@@ -376,7 +382,95 @@ p {
   box-sizing: border-box;
 }
 
-.copyright p{
+.copyright p {
   font-family: "Poppins", sans-serif;
   color: #fff;
+}
+
+/* Sobre */
+
+.sobre {
+  background: url(../img/bg-sobre.jpg) no-repeat center center;
+  padding: 0px;
+}
+
+/* Missao Valores Visao*/
+
+.mvv {
+  background: var(--blue-2);
+}
+
+.mvv-lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+.mvv-lista li{
+  background: #fff;
+  padding: 1rem 2rem 2rem 2rem;
+  border: 1px solid var(--white-3);
+  border-radius: 5px;
+}
+
+.mvv-lista h2{
+  font-size: 1.5rem;
+  color: var(--blue-3);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.mvv-lista h2::before{
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background: url(../img/missao.svg) no-repeat center center;
+  margin: 0 auto 0.25rem auto ;
+}
+
+.mvv-lista li:nth-child(2) h2::before {
+  background: url(../img/visao.svg) no-repeat center center;
+
+}
+
+.mvv-lista li:nth-child(3) h2::before {
+  background: url(../img/valores.svg) no-repeat center center;
+
+}
+
+.mvv-lista p{
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/*Depoimentos*/
+
+.depoimentos{
+  text-align: center;
+}
+
+.depoimentos p, 
+.depoimentos .cta {
+margin-top: 1rem;
+}
+
+/* Agende */
+
+.agende {
+  width: 100%;
+  background: url(../img/bg-agende.jpg) no-repeat center center;
+  background-size: cover;
+  text-align: center;
+}
+
+.agende .titulo, .agende p{
+  color: #fff;
+}
+
+.agende p{
+  max-width: 300px;
+  margin: 0 auto;
+  font-style: italic;
 }
