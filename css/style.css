@@ -116,7 +116,8 @@ p {
   transition: 0.1s ease-out;
 }
 
-.header li a:hover {
+.header li a:hover,
+.header li a.ativo {
   border-bottom: 2px solid #fff;
 }
 
@@ -280,8 +281,8 @@ p {
   box-sizing: border-box;
 }
 
-.sobre-container p{
- text-align: left;
+.sobre-container p {
+  text-align: left;
 }
 
 .sobre-quote {
@@ -291,7 +292,7 @@ p {
   max-width: 750px;
   margin: 4rem auto 0 auto;
   color: var(--black-3);
- text-align: center;
+  text-align: center;
 }
 
 .sobre-cite {
@@ -387,7 +388,7 @@ p {
   color: #fff;
 }
 
-/* Sobre */
+/* Pagina Sobre */
 
 .sobre {
   background: url(../img/bg-sobre.jpg) no-repeat center center;
@@ -407,53 +408,51 @@ p {
   text-align: center;
 }
 
-.mvv-lista li{
+.mvv-lista li {
   background: #fff;
   padding: 1rem 2rem 2rem 2rem;
   border: 1px solid var(--white-3);
   border-radius: 5px;
 }
 
-.mvv-lista h2{
+.mvv-lista h2 {
   font-size: 1.5rem;
   color: var(--blue-3);
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
-.mvv-lista h2::before{
+.mvv-lista h2::before {
   content: "";
   display: block;
   width: 2rem;
   height: 2rem;
   background: url(../img/missao.svg) no-repeat center center;
-  margin: 0 auto 0.25rem auto ;
+  margin: 0 auto 0.25rem auto;
 }
 
 .mvv-lista li:nth-child(2) h2::before {
   background: url(../img/visao.svg) no-repeat center center;
-
 }
 
 .mvv-lista li:nth-child(3) h2::before {
   background: url(../img/valores.svg) no-repeat center center;
-
 }
 
-.mvv-lista p{
+.mvv-lista p {
   max-width: 300px;
   margin: 0 auto;
 }
 
 /*Depoimentos*/
 
-.depoimentos{
+.depoimentos {
   text-align: center;
 }
 
-.depoimentos p, 
+.depoimentos p,
 .depoimentos .cta {
-margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 /* Agende */
@@ -465,12 +464,85 @@ margin-top: 1rem;
   text-align: center;
 }
 
-.agende .titulo, .agende p{
+.agende .titulo,
+.agende p {
   color: #fff;
 }
 
-.agende p{
+.agende p {
   max-width: 300px;
   margin: 0 auto;
   font-style: italic;
+}
+
+/* Pagina passeios */
+
+.passeios {
+  background: url(../img/bg-passeios.jpg) no-repeat center center;
+  padding: 0px;
+}
+
+.passeios-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.passeios-container img {
+  border-radius: 5px;
+}
+
+.info h2 {
+  font-size: 1.125rem;
+  color: var(--green-1);
+  text-transform: uppercase;
+}
+
+.info p {
+  margin: 1rem 0 2rem 0;
+}
+
+.info ul{
+  border: 1px solid var(--white-3);
+  border-radius: 5px;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.info li:first-child{
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px 5px 0 0;
+}
+
+.info li{
+  background: var(--white-1);
+  padding: 0.5rem 1rem;
+  line-height: 1.5;
+}
+
+.info li:last-child{
+  border-radius: 0 0 5px 5px;
+  padding-bottom: 1rem;
+}
+
+.info li:nth-child(odd){
+  background: #fff;
+}
+
+.info li+li{
+  border-top: 1px solid var(--white-3);
+}
+
+.asa-delta{
+  background: var(--white-2);
+}
+
+.galeria {
+  width: 100%;
+  background: var(--white-2);
+  text-align: center;
 }
