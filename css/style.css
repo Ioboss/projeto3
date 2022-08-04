@@ -591,6 +591,8 @@ p {
   border: 1px solid var(--white-3);
   border-radius: 5px;
   padding: 2rem;
+  max-width: 480px;
+  box-sizing: border-box;
 }
 
 .form label,
@@ -695,4 +697,44 @@ p {
 
 .mapa img:hover{
   opacity: 0.6;
+}
+
+/* Trabalhe Conosco*/
+
+.trabalhe-conosco{
+  background: url(../img/bg-trabalhe-conosco.jpg) no-repeat center center;
+  padding: 0px;
+}
+
+.procura-se .form{
+  margin: 0 auto;
+}
+
+.form .curriculo{
+  font-size: 0.875rem;
+  padding: 0px;
+  border: none;
+  border-radius: 0px;
+  background: none;
+}
+
+.curriculo::-webkit-file-upload-button{
+  visibility: hidden;
+}
+
+.curriculo::before{
+  content: "Selecionar";
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  background: var(--white-2);
+  padding: 0.5rem 1rem ;
+  border: 1px solid var(--white-3);
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  transition: 0.3s ease;
+}
+
+.curriculo:hover::before{
+  background: var(--white-3);
 }
