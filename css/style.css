@@ -591,6 +591,7 @@ p {
   border: 1px solid var(--white-3);
   border-radius: 5px;
   padding: 2rem;
+  width: 100%;
   max-width: 480px;
   box-sizing: border-box;
 }
@@ -610,15 +611,16 @@ p {
   margin-bottom: 0.5rem;
 }
 
-.form input, .form select{
+.form input,
+.form select {
   margin-bottom: 1rem;
 }
 
-.select{
+.select {
   position: relative;
 }
 
-.select::after{
+.select::after {
   content: "";
   display: inline-block;
   width: 1rem;
@@ -631,8 +633,10 @@ p {
   pointer-events: none;
 }
 
-.form input, .form select, .form textarea{
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.form input,
+.form select,
+.form textarea {
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.125rem;
   color: var(--black-1);
   padding: 1rem;
@@ -644,13 +648,13 @@ p {
   -moz-appearance: none;
 }
 
-.form textarea{
+.form textarea {
   max-width: 100%;
   height: 200px;
   resize: vertical;
 }
 
-.form button{
+.form button {
   border: none;
   cursor: pointer;
 }
@@ -664,26 +668,27 @@ p {
   margin-bottom: 1rem;
 }
 
-.dados h2:first-child{
+.dados h2:first-child {
   margin-top: 0px;
 }
 
-.dados a, .dados p{
+.dados a,
+.dados p {
   font-size: 1.125rem;
   font-style: italic;
   color: var(--black-1);
   opacity: 0.8;
 }
 
-.dados li+li{
+.dados li + li {
   margin-top: 1rem;
 }
 
-.dados a:hover{
+.dados a:hover {
   text-decoration: underline;
 }
 
-.mapa p{
+.mapa p {
   font-size: 1.125rem;
   font-style: italic;
   text-align: center;
@@ -695,22 +700,22 @@ p {
   transition: 0.3s ease;
 }
 
-.mapa img:hover{
+.mapa img:hover {
   opacity: 0.6;
 }
 
 /* Trabalhe Conosco*/
 
-.trabalhe-conosco{
+.trabalhe-conosco {
   background: url(../img/bg-trabalhe-conosco.jpg) no-repeat center center;
   padding: 0px;
 }
 
-.procura-se .form{
+.procura-se .form {
   margin: 0 auto;
 }
 
-.form .curriculo{
+.form .curriculo {
   font-size: 0.875rem;
   padding: 0px;
   border: none;
@@ -718,16 +723,16 @@ p {
   background: none;
 }
 
-.curriculo::-webkit-file-upload-button{
+.curriculo::-webkit-file-upload-button {
   visibility: hidden;
 }
 
-.curriculo::before{
+.curriculo::before {
   content: "Selecionar";
   font-family: "Poppins", sans-serif;
   display: inline-block;
   background: var(--white-2);
-  padding: 0.5rem 1rem ;
+  padding: 0.5rem 1rem;
   border: 1px solid var(--white-3);
   border-radius: 5px;
   cursor: pointer;
@@ -735,6 +740,224 @@ p {
   transition: 0.3s ease;
 }
 
-.curriculo:hover::before{
+.curriculo:hover::before {
   background: var(--white-3);
+}
+
+/* Responsivo */
+
+@media only screen and (max-width: 750px) {
+  .passeios-home-lista,
+  .depoimentos-lista,
+  .galeria-lista,
+  .footer-container,
+  .mvv-lista,
+  .passeios-container,
+  .atendimento-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .main,
+  .sobre,
+  .passeios,
+  .contato,
+  .trabalhe-conosco {
+    height: 400px;
+  }
+
+  .main {
+    background: url(../img/bg-home-mobile.jpg) no-repeat center center;
+  }
+
+  .sobre {
+    background: url(../img/bg-sobre-mobile.jpg) no-repeat center center;
+  }
+
+  .passeios {
+    background: url(../img/bg-passeios-mobile.jpg) no-repeat center center;
+  }
+
+  .contato {
+    background: url(../img/bg-contato-mobile.jpg) no-repeat center center;
+  }
+
+  .trabalhe-conosco {
+    background: url(../img/bg-trabalhe-conosco-mobile.jpg) no-repeat center
+      center;
+  }
+
+  .passeios-home-lista li {
+    max-width: 388px;
+  }
+
+  .passeios-home-lista p {
+    padding: 1rem;
+  }
+
+  .depoimentos-lista {
+    padding: 0px;
+  }
+
+  .sobre-quote {
+    margin-top: 2rem;
+  }
+
+  .footer-container {
+    justify-items: start;
+    gap: 2rem;
+  }
+
+  .footer-container > li + li {
+    width: 100%;
+    padding-left: 0px;
+    border-left: none;
+    padding-top: 2rem;
+    border-top: 1px solid var(--black-1);
+  }
+
+  .passeios-container {
+    gap: 2rem;
+  }
+
+  .info {
+    text-align: center;
+    max-width: 592px;
+  }
+
+  .wpp-box {
+    gap: 1rem;
+  }
+
+  .atendimento-container {
+    gap: 2rem;
+  }
+
+  .dados h2 {
+    font-size: 1.125rem;
+  }
+
+  .dadps a,
+  .dados p,
+  .mapa p {
+    font-size: 0.875rem;
+  }
+
+  @media only screen and (max-width: 400px) {
+    .main h1 {
+      font-size: 1.5rem;
+    }
+
+    .titulo {
+      font-size: 1.125rem;
+    }
+
+    .depoimentos-lista li,
+    .wpp-box {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+    }
+    .form {
+      padding: 1rem;
+    }
+
+    .form .cta {
+      margin-top: 1rem;
+    }
+  }
+}
+
+/*JAVASCRIPT*/
+/*ANIMAÇÃO AO SCROLL*/
+.js [data-animate="scroll"] {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition: 1s;
+}
+
+.js [data-animate="scroll"].ativo {
+  opacity: 1;
+  transform: none;
+}
+
+/*MENU HAMBURGUER*/
+
+[data-menu="hamburguer"]{
+  display: none;
+}
+
+@media only screen and (max-width:750px){
+  .header{
+    height: 4.25rem;
+    box-sizing: border-box;
+  }
+
+  .js .header-container{
+    flex-wrap: nowrap;
+  }
+  
+  .js [data-menu="hamburguer"]{
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    border: none;
+    background: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-left: 1rem;
+    position: relative;
+  }
+
+  .js [data-menu="hamburguer"]::after{
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 0.125rem;
+    background: #fff;
+    margin-left: 1rem;
+    box-shadow: 0 0.5rem #fff, 0 -0.5rem #fff;
+  }
+
+  .js [data-menu="lista"] {
+    display: none;
+    position: absolute;
+    top: 4.25rem;
+    right: 1rem;
+    width: 200px;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid var(--white-3);
+    box-sizing: border-box;
+    z-index: 200;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.08);
+  }
+
+  .js [data-menu="lista"].ativo {
+    display: block;
+  }
+  
+  .js [data-menu="lista"] li + li {
+    margin-left: 0px;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid var(--white-3);
+  }
+  
+  .js [data-menu="lista"] li a {
+    font-size: 0.875rem;
+    text-transform: none;
+    color: var(--black-1);
+    border: none;
+    transition: 0.1s ease-out;
+  }
+
+  .js [data-menu="lista"] li a:hover{
+    color: var(--white-3);
+  }
+
 }

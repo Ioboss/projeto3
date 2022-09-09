@@ -16,12 +16,14 @@
     <title>Blue Haven | Passeios</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script>document.documentElement.classList.add("js")</script>
   </head>
   <body>
     <header class="header">
       <nav class="container header-container">
         <a href="./"><img src="img/blue-heaven.svg" alt="Blue Heaven" /></a>
-        <ul>
+        <button data-menu="hamburguer" aria-controls="menu">Menu</button>
+        <ul data-menu="lista" id="menu">
           <li><a href="./">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a class="ativo" href="passeios.html">Passeios</a></li>
@@ -35,7 +37,7 @@
         <p>A aventura está lá fora.</p>
       </div>
     </section>
-    <section class="container">
+    <section class="container" data-animate="scroll">
       <h1 class="titulo">Conheça nossas atrações</h1>
       <div class="passeios-container">
         <img src="img/paraquedas-passeios.jpg" alt="Paraquedas" />
@@ -70,7 +72,7 @@
       </div>
     </section>
     <section class="asa-delta">
-      <div class="container passeios-container">
+      <div class="container passeios-container" data-animate="scroll">
         <img src="img/asa-delta-passeios.jpg" alt="Asa-Delta" />
         <div class="info">
           <h2>Asa-Delta</h2>
@@ -103,7 +105,7 @@
       </div>
     </section>
 
-    <section class="container passeios-container">
+    <section class="container passeios-container" data-animate="scroll">
       <img src="img/balonismo-passeios.jpg" alt="Paraquedas" />
       <div class="info">
         <h2>Balonismo</h2>
@@ -133,7 +135,7 @@
       </div>
     </section>
     <section class="galeria">
-      <div class="container">
+      <div class="container" data-animate="scroll">
       <h1 class="titulo">Galeria de fotos</h1>
       <ul class="galeria-lista">
         <li><img src="img/paraquedas.jpg" alt="Paraquedas" /></li>
@@ -212,5 +214,6 @@
         </p>
       </div>
     </footer>
+    <script src="./js/script.js" type="module"></script>
   </body>
 </html>

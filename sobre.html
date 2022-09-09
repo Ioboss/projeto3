@@ -16,12 +16,14 @@
     <title>Blue Haven | Sobre</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script>document.documentElement.classList.add("js")</script>
   </head>
   <body>
     <header class="header">
       <nav class="container header-container">
         <a href="./"><img src="img/blue-heaven.svg" alt="Blue Heaven" /></a>
-        <ul>
+        <button data-menu="hamburguer" aria-controls="menu">Menu</button>
+        <ul data-menu="lista" id="menu">
           <li><a href="./">Home</a></li>
           <li><a class="ativo" href="sobre.html">Sobre</a></li>
           <li><a href="passeios.html">Passeios</a></li>
@@ -35,7 +37,7 @@
         <p>Conheça a Blue Heaven</p>
       </div>
     </section>
-    <section class="container">
+    <section class="container" data-animate="scroll">
       <h1 class="titulo">Sobre a empresa</h1>
       <div class="sobre-container">
         <img src="img/blue-heaven-logo.svg" alt="Blue Heaven" />
@@ -55,7 +57,7 @@
       </div>
     </section>
     <section class="mvv">
-<ul class="mvv-lista container">
+<ul class="mvv-lista container" data-animate="scroll">
   <li>
     <h2>Missão</h2>
     <p>Proporcionar experiências inesquecíveis para as pessoas através dos esportes aéreos e inspirá-las a realizar seus mais altos sonhos.</p>
@@ -71,7 +73,7 @@
 </ul>
     </section>
     <section class="depoimentos">
-      <div class="container">
+      <div class="container" data-animate="scroll">
         <h1 class="titulo">Depoimentos dos clientes</h1>
         <ul class="depoimentos-lista">
           <li>
@@ -123,7 +125,7 @@
       </div>
     </section>
     <section class="agende">
-      <div class="container">
+      <div class="container" data-animate="scroll">
         <h2 class="titulo">Agende seu passeio</h2>
         <p>Está esperando o quê? Agende agora mesmo um passeio de sua preferência e tenha uma memória inesquecível na sua vida.</p>
         <a class="cta" href="contato.html">Agendar</a>
@@ -197,5 +199,6 @@
         </p>
       </div>
     </footer>
+    <script src="./js/script.js" type="module"></script>
   </body>
 </html>

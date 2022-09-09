@@ -16,12 +16,14 @@
     <title>Blue Haven | Trabalhe Conosco</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script>document.documentElement.classList.add("js")</script>
   </head>
   <body>
     <header class="header">
       <nav class="container header-container">
         <a href="./"><img src="img/blue-heaven.svg" alt="Blue Heaven" /></a>
-        <ul>
+        <button data-menu="hamburguer" aria-controls="menu">Menu</button>
+        <ul data-menu="lista" id="menu">
           <li><a href="./">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="passeios.html">Passeios</a></li>
@@ -35,7 +37,7 @@
         <p>Junte-se ao time</p>
       </div>
     </section>
-    <section class="container procura-se">
+    <section class="container procura-se" data-animate="scroll">
       <h1 class="titulo">Procuramos pessoas como você</h1>
 
       <form class="form">
@@ -117,5 +119,6 @@
         </p>
       </div>
     </footer>
+    <script src="./js/script.js" type="module"></script>
   </body>
 </html>

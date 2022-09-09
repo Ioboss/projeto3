@@ -16,12 +16,14 @@
     <title>Blue Haven</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script>document.documentElement.classList.add("js")</script>
   </head>
   <body>
     <header class="header">
       <nav class="container header-container">
         <a href="./"><img src="img/blue-heaven.svg" alt="Blue Heaven" /></a>
-        <ul>
+        <button data-menu="hamburguer" aria-controls="menu">Menu</button>
+        <ul data-menu="lista" id="menu">
           <li><a class="ativo" href="./">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="passeios.html">Passeios</a></li>
@@ -36,7 +38,7 @@
         <a class="cta" href="contato.html">Agendar</a>
       </div>
     </main>
-    <section class="passeios-home container">
+    <section class="passeios-home container" data-animate="scroll">
       <h1 class="titulo">Conheça os passeios</h1>
       <ul class="passeios-home-lista">
         <li>
@@ -68,7 +70,7 @@
       <a class="cta" href="passeios.html">Ver todos</a>
     </section>
     <section class="depoimentos-home">
-      <div class="container">
+      <div class="container" data-animate="scroll">
         <h1 class="titulo">Depoimentos dos clientes</h1>
         <ul class="depoimentos-lista">
           <li>
@@ -118,7 +120,7 @@
         <a class="cta" href="sobre.html">Saiba mais</a>
       </div>
     </section>
-    <section class="galeria-home container">
+    <section class="galeria-home container" data-animate="scroll">
       <h1 class="titulo">Galeria de fotos</h1>
       <ul class="galeria-lista">
         <li><img src="img/paraquedas.jpg" alt="Paraquedas" /></li>
@@ -129,7 +131,7 @@
       <a class="cta" href="passeios.html">Ver mais</a>
     </section>
     <section class="sobre-home">
-      <div class="container">
+      <div class="container" data-animate="scroll">
         <h1 class="titulo">Sobre a empresa</h1>
         <div class="sobre-container">
           <img src="img/blue-heaven-logo.svg" alt="Blue Heaven" />
@@ -150,7 +152,7 @@
       </div>
     </section>
     <footer class="footer">
-      <div class="container">
+      <div class="container" >
         <ul class="footer-container">
           <li>
             <h2>Localização</h2>
@@ -213,5 +215,6 @@
         </p>
       </div>
     </footer>
+     <script src="./js/script.js" type="module"></script>
   </body>
 </html>

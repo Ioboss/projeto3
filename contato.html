@@ -16,12 +16,14 @@
     <title>Blue Haven | Contato</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script>document.documentElement.classList.add("js")</script>
   </head>
   <body>
     <header class="header">
       <nav class="container header-container">
         <a href="./"><img src="img/blue-heaven.svg" alt="Blue Heaven" /></a>
-        <ul>
+        <button data-menu="hamburguer" aria-controls="menu">Menu</button>
+        <ul data-menu="lista" id="menu">
           <li><a href="./">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="passeios.html">Passeios</a></li>
@@ -35,7 +37,7 @@
         <p>Agende passeios. Envie sua mensagem.</p>
       </div>
     </section>
-    <section class="container wpp">
+    <section class="container wpp" data-animate="scroll">
       <h1 class="titulo">Agende pelo Whatsapp</h1>
       <div class="wpp-box">
         <img src="/img/whatsapp-logo.svg" alt="Whatsapp BLue Haven" />
@@ -47,7 +49,7 @@
       <a class="cta" href="" target="_blank">Enviar Whatsapp</a>
     </section>
     <section class="atendimento">
-      <div class="container">
+      <div class="container" data-animate="scroll">
         <h1 class="titulo">Atendimento personalizado</h1>
         <div class="atendimento-container">
           <form class="form">
@@ -117,7 +119,7 @@
         </div>
       </div>
     </section>
-    <section class="container mapa">
+    <section class="container mapa" data-animate="scroll">
       <h1 class="titulo">Visualizar no mapa</h1>
       <p>Clique sobre o mapa para abrir no aplicativo Google Maps</p>
       <a href="https://www.google.com" target="_blank"
@@ -192,5 +194,6 @@
         </p>
       </div>
     </footer>
+    <script src="./js/script.js" type="module"></script>
   </body>
 </html>
