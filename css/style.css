@@ -594,6 +594,7 @@ p {
   width: 100%;
   max-width: 480px;
   box-sizing: border-box;
+  align-self: start;
 }
 
 .form label,
@@ -883,21 +884,21 @@ p {
 
 /*MENU HAMBURGUER*/
 
-[data-menu="hamburguer"]{
+[data-menu="hamburguer"] {
   display: none;
 }
 
-@media only screen and (max-width:750px){
-  .header{
+@media only screen and (max-width: 750px) {
+  .header {
     height: 4.25rem;
     box-sizing: border-box;
   }
 
-  .js .header-container{
+  .js .header-container {
     flex-wrap: nowrap;
   }
-  
-  .js [data-menu="hamburguer"]{
+
+  .js [data-menu="hamburguer"] {
     display: flex;
     align-items: center;
     padding: 0px;
@@ -912,7 +913,7 @@ p {
     position: relative;
   }
 
-  .js [data-menu="hamburguer"]::after{
+  .js [data-menu="hamburguer"]::after {
     content: "";
     display: inline-block;
     width: 2rem;
@@ -934,20 +935,20 @@ p {
     border: 1px solid var(--white-3);
     box-sizing: border-box;
     z-index: 200;
-    box-shadow: 0 2px 2px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
   }
 
   .js [data-menu="lista"].ativo {
     display: block;
   }
-  
+
   .js [data-menu="lista"] li + li {
     margin-left: 0px;
     padding-top: 0.5rem;
     margin-top: 0.5rem;
     border-top: 1px solid var(--white-3);
   }
-  
+
   .js [data-menu="lista"] li a {
     font-size: 0.875rem;
     text-transform: none;
@@ -956,8 +957,17 @@ p {
     transition: 0.1s ease-out;
   }
 
-  .js [data-menu="lista"] li a:hover{
+  .js [data-menu="lista"] li a:hover {
     color: var(--white-3);
   }
+}
 
+/*FORMULARIO*/
+
+#form-error {
+  color: tomato;
+}
+
+#form-success {
+  color: var(--green-2);
 }
